@@ -6,9 +6,32 @@
   cursor: pointer;
   fill: rgb(102, 102, 102);
   height: 18px;
+  margin-top: -9px;
   outline: none;
   position: absolute;
-  right: 10px;
-  top: 8px;
+  right: 0;
+  top: 50%;
   width: 18px;
+}
+
+.fc-clear-tooltip {
+  background-color: #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+  left: 50%;
+  margin-left: -21.5px;
+  opacity: 0;
+  padding: 3px 4px;
+  position: absolute;
+  -webkit-transition: all 300ms 300ms;
+  -moz-transition: all 300ms 300ms;
+  -o-transition: all 300ms 300ms;
+  -ms-transition: all 300ms 300ms;
+  transition: all 300ms 300ms;
+  visibility: collapse;
+}
+
+.fc-clear-icon:hover > .fc-clear-tooltip {
+  opacity: 1;
+  visibility: visible;
 }

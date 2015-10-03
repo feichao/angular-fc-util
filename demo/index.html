@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoUtil">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>demo clear</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="bower_components/angular-fc-util/src/angular-util.css">
+</head>
+<body>
+  <div ng-controller="DemoCtrl" style="margin: 20px;">
+    <div fc-doc-click="dosomething()">    
+      <input ng-model="name" placeholder="Name" fcclear fc-class="clear-name" fc-icon-class="clea-name-icon">
+  </div>
+  </div>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-fc-util/src/angular-util.js"></script>
+  <script>
+  angular
+    .module('demoUtil', [
+      'fc.util'
+    ]).controller('DemoCtrl', DemoCtrl);
+
+  function DemoCtrl($scope) {
+    $scope.dosomething = function(){
+      console.log("message");
+    };
+  }
+  </script>
+</body>
+
+</html>
